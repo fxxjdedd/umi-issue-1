@@ -13,6 +13,9 @@ import Authorized from '@/utils/Authorized';
 import RightContent from '@/components/GlobalHeader/RightContent';
 import { isAntDesignPro, getAuthorityFromRouter } from '@/utils/utils';
 import logo from '../assets/logo.svg';
+import tips from './tips';
+import { foo } from '@/utils';
+
 const noMatch = (
   <Result
     status="403"
@@ -88,6 +91,7 @@ const footerRender = () => {
 };
 
 const BasicLayout = props => {
+  foo();
   const {
     dispatch,
     children,
