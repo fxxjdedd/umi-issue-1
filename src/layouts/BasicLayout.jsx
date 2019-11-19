@@ -13,6 +13,8 @@ import Authorized from '@/utils/Authorized';
 import RightContent from '@/components/GlobalHeader/RightContent';
 import { isAntDesignPro, getAuthorityFromRouter } from '@/utils/utils';
 import logo from '../assets/logo.svg';
+import tips from './tips';
+
 const noMatch = (
   <Result
     status="403"
@@ -88,6 +90,11 @@ const footerRender = () => {
 };
 
 const BasicLayout = props => {
+  /**
+   * config.js 中的 dynamicImport 如果不开启，会有如下问题：
+   */
+  console.log('get null', tips.tipLang);
+  console.log('get correct value', formatMessage({ id: 'navBar.lang' }));
   const {
     dispatch,
     children,
